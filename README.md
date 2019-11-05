@@ -9,9 +9,13 @@
 - client-mode，这种模式下只需要在客户端定时执行一个 Node.js 程序，当前地址的公网 IP 是借助访问公共的 API 来获取的
 - server-mode，这种模式需要在服务端部署一个 Node.js 程序，并且在客户端定时请求服务端以使得服务端获知当前客户端所在地址的公网 IP
 
-client-mode 是最近新开发的，推荐使用该模式，部署更为简单，无需云服务器资源，但要求客户端有 Node.js 的执行环境。
+client-mode 推荐使用该模式，部署更为简单，无需云服务器资源，但要求客户端有 Node.js 的执行环境。
 
 server-mode 适合一些客户端无法安装 Node.js 环境的场景（例如路由器）
+
+## License
+
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 ## 使用前提
 
@@ -80,3 +84,4 @@ server-mode 适合一些客户端无法安装 Node.js 环境的场景（例如�
 ### 安全事项
 
 由于在 server-mode 中，服务端暴露的 API 未加任何身份验证措施，相当于是把阿里云解析的修改、添加 API 暴露在了外界，所以一定要注意入口地址的隐藏。
+
